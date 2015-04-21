@@ -1,0 +1,9 @@
+This repo demonstrates an error in the current version of gopherjs net/http package.
+Really this is due to a [bug in firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1110761).
+
+### Steps to Reproduce
+
+1. Install the latest version of gopherjs `go get -u github.com/gopherjs/gopherjs`
+2. In the project root, run `gopherjs build -o app.js`
+3. Serve the project. E.g. with `python -m SimpleHTTPServer`
+4. Open the file in Firefox on Mac OS and observe the ouput in the web console. You should see an error along the lines of `InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable`.
